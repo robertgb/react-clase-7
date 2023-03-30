@@ -5,6 +5,7 @@ export const GlobalStyle = createGlobalStyle`
         margin: 0;
         background-color: #191919;
         font-family: "Poppins", sans-serif;
+        color: white;
     }
     img {
         max-width: 100%;
