@@ -15,36 +15,37 @@ import {
   counterReducer,
 } from "../../reducers/countReducer";
 import { TYPES } from "../../actionTypes/countActions";
+import { useCountContext } from "../../context/CountContext";
 
 const Counter = () => {
-  const [state, dispatch] = useReducer(counterReducer, counterInitialState);
+  const { state, dispatch } = useCountContext();
 
   const handleDecrement = () => {
-    dispatch({ type: TYPES.DECREMENT })
+    dispatch({ type: TYPES.DECREMENT });
   };
 
   const handleIncrement = () => {
-    dispatch({ type: TYPES.INCREMENT })
+    dispatch({ type: TYPES.INCREMENT });
   };
 
   const handleMultiply = () => {
-    dispatch({ type: TYPES.MULTIPLY })
+    dispatch({ type: TYPES.MULTIPLY });
   };
 
   const handleDivide = () => {
-    dispatch({ type: TYPES.DIVIDE })
+    dispatch({ type: TYPES.DIVIDE });
   };
 
   const handleDecrementBy5 = () => {
-    dispatch({ type: TYPES.DECREMENT_5 })
+    dispatch({ type: TYPES.DECREMENT_5 });
   };
 
   const handleIncrementBy5 = () => {
-    dispatch({ type: TYPES.INCREMENT_5 })
+    dispatch({ type: TYPES.INCREMENT_5 });
   };
 
   const handleReset = () => {
-    dispatch({ type: TYPES.RESET })
+    dispatch({ type: TYPES.RESET });
   };
 
   return (
